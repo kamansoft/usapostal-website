@@ -21,7 +21,7 @@ const values = [
 
 const Values = () => {
   return (
-    <section className="py-20 bg-secondary text-secondary-foreground">
+    <section id="values" className="py-20 bg-secondary text-secondary-foreground">
       <div className="container px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">

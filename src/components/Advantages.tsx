@@ -27,7 +27,7 @@ const advantages = [
 
 const Advantages = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="advantages" className="py-20 bg-muted/30">
       <div className="container px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
