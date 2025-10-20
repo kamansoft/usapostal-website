@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 px-4 py-20">
+      <div className="container relative z-20 px-4 pt-32 md:pt-40 pb-20">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight">
