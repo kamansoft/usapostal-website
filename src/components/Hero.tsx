@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package, Truck, Shield } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
@@ -11,7 +10,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${logo})`,
+            backgroundImage: 'none',
             filter: 'blur(100px) brightness(0.3)',
             transform: 'scale(1.2)',
           }}
@@ -21,15 +20,6 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-20 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <img 
-              src={logo} 
-              alt="USAPOSTAL Logo" 
-              className="h-16 md:h-20 w-auto drop-shadow-glow"
-            />
-          </div>
-
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight">
             EFICIENCIA, SEGURIDAD Y EXPERIENCIA
