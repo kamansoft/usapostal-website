@@ -60,7 +60,11 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-primary-foreground hover:text-primary transition-colors font-medium"
+                className={`transition-colors font-medium ${
+                  isScrolled 
+                    ? "text-secondary-foreground hover:text-primary" 
+                    : "text-primary-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
               </button>
@@ -73,7 +77,11 @@ const Navigation = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-primary-foreground hover:text-primary hover:bg-primary/10"
+                className={`transition-colors ${
+                  isScrolled
+                    ? "text-secondary-foreground hover:text-primary hover:bg-primary/10"
+                    : "text-primary-foreground hover:text-primary hover:bg-primary/10"
+                }`}
               >
                 <Menu className="h-6 w-6" />
               </Button>
@@ -85,7 +93,7 @@ const Navigation = () => {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left text-lg text-primary-foreground hover:text-primary transition-colors font-medium"
+                    className="text-left text-lg text-secondary-foreground hover:text-primary transition-colors font-medium"
                   >
                     {item.label}
                   </button>
