@@ -59,7 +59,7 @@ const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8 py-6 rounded-full transition-all hover:scale-105 backdrop-blur-sm"
+              className="border-2 border-primary bg-card/90 text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-8 py-6 rounded-full transition-all hover:scale-105 backdrop-blur-sm"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Conocer Servicios
