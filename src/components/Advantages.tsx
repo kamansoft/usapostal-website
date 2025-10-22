@@ -27,13 +27,13 @@ const advantages = [
 
 const Advantages = () => {
   return (
-    <section id="advantages" className="py-20 bg-muted/30">
+    <section id="advantages" className="py-16 md:py-24 bg-muted/30">
       <div className="container px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground tracking-tight">
             Ventajas Competitivas
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
             Por qué las empresas líderes confían en USAPOSTAL para sus necesidades logísticas
           </p>
         </div>
@@ -57,18 +57,18 @@ const Advantages = () => {
           {advantages.map((advantage, index) => (
             <Card 
               key={index}
-              className="p-8 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:border-primary/50 animate-fade-in-up"
+              className="p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/50 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex gap-6">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow">
-                  <advantage.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow">
+                  <advantage.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <div className="space-y-3">
-                  <h3 className="text-xl font-display font-semibold text-foreground">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-display font-semibold text-foreground">
                     {advantage.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {advantage.description}
                   </p>
                 </div>
@@ -78,8 +78,8 @@ const Advantages = () => {
         </div>
 
         {/* Benefits List */}
-        <div className="mt-12 p-8 bg-card rounded-2xl border-2 border-primary/20">
-          <h3 className="text-2xl font-display font-bold text-foreground mb-6 text-center">
+        <div className="mt-12 p-6 md:p-8 bg-card rounded-xl border-2 border-primary/20">
+          <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-6 text-center">
             Beneficios para su Empresa
           </h3>
           <div className="grid md:grid-cols-3 gap-6">

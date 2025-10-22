@@ -19,45 +19,45 @@ const contacts = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-hero text-primary-foreground">
+    <section id="contact" className="py-16 md:py-24 bg-gradient-hero text-primary-foreground">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
               ¿Listo para Optimizar su Logística?
             </h2>
-            <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
               No deje pasar la oportunidad de transformar el transporte de su carga en una ventaja competitiva para su empresa
             </p>
           </div>
 
           {/* Questions */}
-          <div className="mb-12 space-y-4">
-            <Card className="p-6 bg-card/10 backdrop-blur-sm border-primary/30">
-              <p className="text-primary-foreground/90">
+          <div className="mb-10 space-y-3">
+            <Card className="p-5 bg-card/10 backdrop-blur-sm border-primary/30">
+              <p className="text-sm md:text-base text-primary-foreground/90 leading-relaxed">
                 ¿Qué tipo de carga transporta con mayor frecuencia y qué retos enfrenta actualmente?
               </p>
             </Card>
-            <Card className="p-6 bg-card/10 backdrop-blur-sm border-primary/30">
-              <p className="text-primary-foreground/90">
+            <Card className="p-5 bg-card/10 backdrop-blur-sm border-primary/30">
+              <p className="text-sm md:text-base text-primary-foreground/90 leading-relaxed">
                 ¿Le gustaría contar con un aliado que le garantice seguridad, puntualidad y trazabilidad en cada despacho?
               </p>
             </Card>
-            <Card className="p-6 bg-card/10 backdrop-blur-sm border-primary/30">
-              <p className="text-primary-foreground/90">
+            <Card className="p-5 bg-card/10 backdrop-blur-sm border-primary/30">
+              <p className="text-sm md:text-base text-primary-foreground/90 leading-relaxed">
                 ¿Está buscando reducir costos logísticos sin sacrificar calidad ni cumplimiento?
               </p>
             </Card>
           </div>
 
           {/* CTA */}
-          <div className="text-center mb-12">
-            <div className="inline-block p-8 bg-card/10 backdrop-blur-sm border-2 border-primary rounded-2xl">
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
+          <div className="text-center mb-10">
+            <div className="inline-block p-6 md:p-8 bg-card/10 backdrop-blur-sm border-2 border-primary rounded-xl">
+              <h3 className="text-xl md:text-2xl font-display font-bold mb-3">
                 ¡Actúe Ahora!
               </h3>
-              <p className="text-primary-foreground/90 mb-6 max-w-xl">
+              <p className="text-sm md:text-base text-primary-foreground/90 mb-6 max-w-xl leading-relaxed">
                 Contáctenos hoy mismo para agendar una reunión personalizada y descubrir cómo podemos transformar su logística
               </p>
               <Button 
@@ -75,7 +75,7 @@ const Contact = () => {
             {contacts.map((contact, index) => (
               <Card 
                 key={index}
-                className="p-8 bg-card/10 backdrop-blur-sm border-primary/30 hover:border-primary/60 transition-all duration-300"
+                className="p-6 bg-card/10 backdrop-blur-sm border-primary/30 hover:border-primary/60 transition-all duration-300"
               >
                 <div className="space-y-4">
                   <div>
@@ -110,11 +110,11 @@ const Contact = () => {
           </div>
 
           {/* Footer Message */}
-          <div className="text-center mt-12">
-            <p className="text-lg text-primary-foreground/80 font-medium">
+          <div className="text-center mt-10">
+            <p className="text-base md:text-lg text-primary-foreground/80">
               Gracias por considerar a <span className="text-primary font-bold">USAPOSTAL</span> como su socio estratégico en transporte.
             </p>
-            <p className="text-xl text-primary-foreground font-bold mt-2">
+            <p className="text-lg md:text-xl text-primary-foreground font-bold mt-2">
               Estamos listos para comenzar. ¿Y usted?
             </p>
           </div>

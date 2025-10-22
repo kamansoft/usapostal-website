@@ -18,20 +18,20 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 px-4 pt-32 md:pt-40 pb-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+      <div className="container relative z-20 px-4 pt-32 md:pt-40 pb-16">
+        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight tracking-tight">
             EFICIENCIA, SEGURIDAD Y EXPERIENCIA
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 max-w-3xl mx-auto font-medium">
+          <p className="text-base md:text-lg lg:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
             Especializados en brindar servicios de transporte de carga a nivel nacional
           </p>
 
           {/* Service Pills */}
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
+          <div className="flex flex-wrap justify-center gap-3 pt-2">
             <div className="flex items-center gap-2 bg-card/10 backdrop-blur-sm border border-primary/30 rounded-full px-6 py-3">
               <Package className="w-5 h-5 text-primary" />
               <span className="text-primary-foreground font-medium">Carga Masiva</span>
@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button 
               size="lg"
               className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold text-lg px-8 py-6 rounded-full shadow-glow transition-all hover:scale-105"
@@ -67,7 +67,7 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 max-w-3xl mx-auto">
             <div className="text-center space-y-2">
               <div className="text-4xl font-display font-bold text-primary">15+</div>
               <div className="text-primary-foreground/80 font-medium">Años de Experiencia</div>

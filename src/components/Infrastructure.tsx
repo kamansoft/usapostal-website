@@ -22,9 +22,9 @@ const infrastructure = [
 
 const Infrastructure = () => {
   return (
-    <section id="infrastructure" className="py-20 bg-background">
+    <section id="infrastructure" className="py-16 md:py-24 bg-background">
       <div className="container px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Image Side */}
           <div className="relative rounded-2xl overflow-hidden h-[400px] lg:h-[600px] animate-scale-in">
             <img 
@@ -36,12 +36,12 @@ const Infrastructure = () => {
           </div>
 
           {/* Content Side */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground tracking-tight">
                 Infraestructura
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Instalaciones modernas y tecnología de punta para garantizar un servicio excepcional
               </p>
             </div>
