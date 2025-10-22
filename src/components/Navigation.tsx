@@ -43,7 +43,9 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center"
+            className={`flex items-center transition-all duration-300 ${
+              isScrolled ? "" : "bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg"
+            }`}
           >
             <img
               src={logo}
