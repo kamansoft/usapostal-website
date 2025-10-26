@@ -41,27 +41,36 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button
-            onClick={() => scrollToSection("hero")}
+          <a
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("hero");
+            }}
             className={`flex items-center transition-all duration-300 ${
               isScrolled ? "" : "bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg"
             }`}
+            aria-label="USAPOSTAL - Ir al inicio"
           >
             <img
               src={logo}
-              alt="USAPOSTAL"
+              alt="USAPOSTAL - Transporte de Carga Colombia"
               className={`transition-all duration-300 ${
                 isScrolled ? "h-10" : "h-12 md:h-14"
               }`}
             />
-          </button>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
                 className={`transition-colors font-medium ${
                   isScrolled 
                     ? "text-secondary-foreground hover:text-primary" 
@@ -69,7 +78,7 @@ const Navigation = () => {
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -90,15 +99,19 @@ const Navigation = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-64 bg-secondary">
               <div className="flex flex-col gap-6 mt-8">
-                <img src={logo} alt="USAPOSTAL" className="h-12 mb-4" />
+                <img src={logo} alt="USAPOSTAL - Transporte de Carga Colombia" className="h-12 mb-4" />
                 {navItems.map((item) => (
-                  <button
+                  <a
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                    href={`#${item.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.id);
+                    }}
                     className="text-left text-lg text-secondary-foreground hover:text-primary transition-colors font-medium"
                   >
                     {item.label}
-                  </button>
+                  </a>
                 ))}
               </div>
             </SheetContent>
