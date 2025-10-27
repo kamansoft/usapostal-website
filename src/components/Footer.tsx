@@ -42,10 +42,10 @@ const Footer = () => {
   return (
     <footer 
       ref={footerRef}
-      className={`bg-primary text-primary-foreground border-t border-primary-glow transition-all duration-700 ease-out ${
+      className={`bg-primary text-primary-foreground border-t border-primary-glow transition-all duration-1000 ease-out ${
         isVisible 
           ? "opacity-100 translate-y-0" 
-          : "opacity-0 translate-y-10"
+          : "opacity-0 translate-y-32"
       }`}
     >
       <div className="container mx-auto px-4 py-8">
