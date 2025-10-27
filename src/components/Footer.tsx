@@ -6,28 +6,29 @@ const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      const clientHeight = window.innerHeight;
+      
+      // Calcula qué tan cerca está el usuario del final (300px antes del final)
+      const distanceFromBottom = scrollHeight - (scrollTop + clientHeight);
+      
+      if (distanceFromBottom < 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
       }
-    );
+    };
 
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
-
+    // Ejecutar al cargar
+    handleScroll();
+    
+    // Agregar listener de scroll
+    window.addEventListener("scroll", handleScroll);
+    
     return () => {
-      if (footerRef.current) {
-        observer.unobserve(footerRef.current);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   const socialLinks = [
