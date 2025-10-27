@@ -1,6 +1,35 @@
 import { Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "#", label: "Instagram" },
@@ -10,7 +39,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground border-t border-primary-glow">
+    <footer 
+      ref={footerRef}
+      className={`bg-primary text-primary-foreground border-t border-primary-glow transition-all duration-700 ease-out ${
+        isVisible 
+          ? "opacity-100 translate-y-0" 
+          : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center gap-6">
           {/* Social Media Icons */}
